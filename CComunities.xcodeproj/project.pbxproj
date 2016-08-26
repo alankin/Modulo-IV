@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		14C3338F1D68F04400BE9B38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C3338E1D68F04400BE9B38 /* AppDelegate.swift */; };
-		14C333911D68F04400BE9B38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C333901D68F04400BE9B38 /* ViewController.swift */; };
+		14C333911D68F04400BE9B38 /* PublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C333901D68F04400BE9B38 /* PublicationViewController.swift */; };
 		14C333941D68F04400BE9B38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C333921D68F04400BE9B38 /* Main.storyboard */; };
 		14C333961D68F04400BE9B38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14C333951D68F04400BE9B38 /* Assets.xcassets */; };
 		14C333991D68F04400BE9B38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C333971D68F04400BE9B38 /* LaunchScreen.storyboard */; };
 		14C333A41D68F04400BE9B38 /* CComunitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C333A31D68F04400BE9B38 /* CComunitiesTests.swift */; };
 		14C333AF1D68F04400BE9B38 /* CComunitiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C333AE1D68F04400BE9B38 /* CComunitiesUITests.swift */; };
+		525C8E9D1D70E1FD007AAF67 /* AwardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C8E9C1D70E1FD007AAF67 /* AwardViewController.swift */; };
+		525C8E9F1D70E3D8007AAF67 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C8E9E1D70E3D8007AAF67 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		14C3338B1D68F04400BE9B38 /* CComunities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CComunities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C3338E1D68F04400BE9B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		14C333901D68F04400BE9B38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		14C333901D68F04400BE9B38 /* PublicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationViewController.swift; sourceTree = "<group>"; };
 		14C333931D68F04400BE9B38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14C333951D68F04400BE9B38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14C333981D68F04400BE9B38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		14C333AA1D68F04400BE9B38 /* CComunitiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CComunitiesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C333AE1D68F04400BE9B38 /* CComunitiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CComunitiesUITests.swift; sourceTree = "<group>"; };
 		14C333B01D68F04400BE9B38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		525C8E9C1D70E1FD007AAF67 /* AwardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwardViewController.swift; sourceTree = "<group>"; };
+		525C8E9E1D70E3D8007AAF67 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				14C3338E1D68F04400BE9B38 /* AppDelegate.swift */,
-				14C333901D68F04400BE9B38 /* ViewController.swift */,
+				14C333901D68F04400BE9B38 /* PublicationViewController.swift */,
+				525C8E9C1D70E1FD007AAF67 /* AwardViewController.swift */,
 				14C333921D68F04400BE9B38 /* Main.storyboard */,
 				14C333951D68F04400BE9B38 /* Assets.xcassets */,
 				14C333971D68F04400BE9B38 /* LaunchScreen.storyboard */,
 				14C3339A1D68F04400BE9B38 /* Info.plist */,
+				525C8E9E1D70E3D8007AAF67 /* LoginViewController.swift */,
 			);
 			path = CComunities;
 			sourceTree = "<group>";
@@ -256,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14C333911D68F04400BE9B38 /* ViewController.swift in Sources */,
+				525C8E9F1D70E3D8007AAF67 /* LoginViewController.swift in Sources */,
+				14C333911D68F04400BE9B38 /* PublicationViewController.swift in Sources */,
+				525C8E9D1D70E1FD007AAF67 /* AwardViewController.swift in Sources */,
 				14C3338F1D68F04400BE9B38 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +492,7 @@
 				14C333B51D68F04400BE9B38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14C333B61D68F04400BE9B38 /* Build configuration list for PBXNativeTarget "CComunitiesTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +501,7 @@
 				14C333B81D68F04400BE9B38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		14C333B91D68F04400BE9B38 /* Build configuration list for PBXNativeTarget "CComunitiesUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +510,7 @@
 				14C333BB1D68F04400BE9B38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
