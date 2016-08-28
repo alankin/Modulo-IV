@@ -16,6 +16,9 @@
 		14C333AF1D68F04400BE9B38 /* CComunitiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C333AE1D68F04400BE9B38 /* CComunitiesUITests.swift */; };
 		525C8E9D1D70E1FD007AAF67 /* AwardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C8E9C1D70E1FD007AAF67 /* AwardViewController.swift */; };
 		525C8E9F1D70E3D8007AAF67 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C8E9E1D70E3D8007AAF67 /* LoginViewController.swift */; };
+		526544451D7246150032A90B /* PublicationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526544441D7246150032A90B /* PublicationTableViewController.swift */; };
+		526544471D7246460032A90B /* Publication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526544461D7246460032A90B /* Publication.swift */; };
+		526544491D7250850032A90B /* PublicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526544481D7250850032A90B /* PublicationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		14C333B01D68F04400BE9B38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		525C8E9C1D70E1FD007AAF67 /* AwardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwardViewController.swift; sourceTree = "<group>"; };
 		525C8E9E1D70E3D8007AAF67 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		526544441D7246150032A90B /* PublicationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationTableViewController.swift; sourceTree = "<group>"; };
+		526544461D7246460032A90B /* Publication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Publication.swift; sourceTree = "<group>"; };
+		526544481D7250850032A90B /* PublicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,9 @@
 				14C333971D68F04400BE9B38 /* LaunchScreen.storyboard */,
 				14C3339A1D68F04400BE9B38 /* Info.plist */,
 				525C8E9E1D70E3D8007AAF67 /* LoginViewController.swift */,
+				526544441D7246150032A90B /* PublicationTableViewController.swift */,
+				526544461D7246460032A90B /* Publication.swift */,
+				526544481D7250850032A90B /* PublicationTableViewCell.swift */,
 			);
 			path = CComunities;
 			sourceTree = "<group>";
@@ -262,8 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				526544491D7250850032A90B /* PublicationTableViewCell.swift in Sources */,
+				526544471D7246460032A90B /* Publication.swift in Sources */,
 				525C8E9F1D70E3D8007AAF67 /* LoginViewController.swift in Sources */,
 				14C333911D68F04400BE9B38 /* PublicationViewController.swift in Sources */,
+				526544451D7246150032A90B /* PublicationTableViewController.swift in Sources */,
 				525C8E9D1D70E1FD007AAF67 /* AwardViewController.swift in Sources */,
 				14C3338F1D68F04400BE9B38 /* AppDelegate.swift in Sources */,
 			);
