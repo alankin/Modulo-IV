@@ -19,6 +19,7 @@ class PublicationTableViewCell: UITableViewCell {
     @IBOutlet weak var photoUserImageView: UIImageView!
     
     @IBOutlet weak var descriptionTextView: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
