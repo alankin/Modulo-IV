@@ -10,11 +10,11 @@ import UIKit
 
 class Publication{
     var title: String
-    var description: String
+    var description: UITextView?
     var responsable: String
     var date: String
     
-    init?(title: String, description: String, responsable: String, date: String){
+    init?(title: String, description: UITextView?, responsable: String, date: String){
         self.title = title
         self.description = description
         self.responsable = responsable

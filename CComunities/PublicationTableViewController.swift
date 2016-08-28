@@ -14,7 +14,9 @@ class PublicationTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let post1 = Publication(title: "Taller de maestros", description: "Una descripcion breve", responsable: "Nicaela Onofre", date: "02-11-2016")!
+        //let description = UITextView()!
+        //aqui da error, lo de arriba queria hacer como de la foto de las comidas
+       let post1 = Publication(title: "Taller de maestros", description: "Una descripcion breve descripcion breve descripcion breve descripcion breve descripcion breve descripcion breve", responsable: "Nicaela Onofre", date: "02-11-2016");!
         publications += [post1]
 
         // Uncomment the following line to preserve selection between presentations
@@ -50,8 +52,9 @@ class PublicationTableViewController: UITableViewController {
         // Fetches the appropriate meal for the data source layout.
         let post = publications[indexPath.row]
         cell.titleLabel.text = post.title
-        cell.descriptionLabel.text = post.description
+        cell.descriptionTextView.text = post.description
         cell.responsableLabel.text = post.responsable
+        cell.dateLabel.text = post.date
 
         return cell
     }
