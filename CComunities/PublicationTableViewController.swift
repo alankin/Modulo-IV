@@ -43,14 +43,15 @@ class PublicationTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("PublicationTableViewCell", forIndexPath: indexPath) as! PublicationTableViewCell
+        // Table view cells are reused and should be dequeued using a cell identifier.
+        let cellIdentifier = "PublicationTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! PublicationTableViewCell
+        
+        // Fetches the appropriate meal for the data source layout.
         let post = publications[indexPath.row]
         cell.titleLabel.text = post.title
         cell.descriptionLabel.text = post.description
         cell.responsableLabel.text = post.responsable
-        
-
-        // Configure the cell...
 
         return cell
     }
