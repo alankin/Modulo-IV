@@ -17,6 +17,8 @@ class LoginViewController: UIViewController {
     
     var users = [User]()
     
+    let prefixPassword = "password"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadUsers()
@@ -44,9 +46,59 @@ class LoginViewController: UIViewController {
     @IBAction func login(sender: UIButton) {
         let username = usernameTextField.text
         let password = passwordTextField.text
-        print("\(username!) \(password!)")
-        // hacer la conexion con el servicio rest
-        // guardar en el property el id del usuario que se esta logueando
+        let user = getUser(username!, password: password!)
+        
+        if(user.userId > -1){
+            // login succesfull
+            // Save user_id on properties
+            saveOnProperties(user.userId, property: "user_id")
+            
+            goToPublications()
+            
+        }else{
+            //login failed
+            print("Login failed")
+        }
+    }
+    
+    func goToPublications(){
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+    
+        let tabBarController = storyBoard.instantiateViewControllerWithIdentifier("TabBarController") as! UITabBarController
+        self.presentViewController(tabBarController, animated:true, completion:nil)
+    
+    }
+    
+    func saveOnProperties(id:Int, property:String){
+        let preferences = NSUserDefaults.standardUserDefaults()
+        
+        preferences.setInteger(id, forKey: property)
+        
+        //  Save to disk
+        let didSave = preferences.synchronize()
+        
+        if !didSave {
+            print("There was a problem saving the id");
+        }else{
+            print("Saved on properties! id: \(id)");
+        }
+    }
+    
+    func getUser(username:String, password:String) -> User{
+        var userRes = User()
+        
+        for user in self.users{
+            if user.username == username &&  password == getPassword(user.userId){
+                userRes = user
+                break
+            }
+        }
+        
+        return userRes!
+    }
+    
+    func getPassword(id:Int) -> String{
+        return prefixPassword + String(id)
     }
     
     func loadUsers(){
@@ -56,7 +108,7 @@ class LoginViewController: UIViewController {
                     if let restUsers = response.result.value {
                         //print("JSON: \(restUsers)")
                         for user in restUsers as! [AnyObject] {
-                            let newUser = User(userId: user["id"]!!.integerValue, name: user["name"]!! as! String, lastName: user["name"]!! as! String, email: user["email"]!! as! String, photo:UIImage(named: "User")!)
+                            let newUser = User(userId: user["id"]!!.integerValue, username: user["username"]!! as! String, name: user["name"]!! as! String, lastName: user["name"]!! as! String, email: user["email"]!! as! String, photo:UIImage(named: "User")!)
                             self.users.append(newUser!)
                         }
                     }

@@ -79,7 +79,7 @@ class PublicationTableViewController: UITableViewController {
     
     func isLogged() -> Bool{
         //TODO: Change this value to false when rest service is integrated
-        var logged = true
+        var logged = false
         
         let preferences = NSUserDefaults.standardUserDefaults()
         
