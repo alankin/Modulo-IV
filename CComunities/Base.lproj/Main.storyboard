@@ -221,92 +221,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Awards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAc-pv-2ri">
-                                <rect key="frame" x="254" y="33" width="65" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="1zQ-Xu-TLn"/>
-                                    <constraint firstAttribute="width" constant="65" id="b5F-fZ-TsP"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First publication!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbv-36-kEi">
+                                <rect key="frame" x="53" y="207" width="460" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congratulations! " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pom-Ii-Dak">
+                                <rect key="frame" x="53" y="222" width="117" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="________________________________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8H-HU-Pz9">
+                                <rect key="frame" x="0.0" y="250" width="435" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User_Award" translatesAutoresizingMaskIntoConstraints="NO" id="eIC-lu-aRx">
-                                <rect key="frame" x="235" y="62" width="130" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="First_Award" translatesAutoresizingMaskIntoConstraints="NO" id="YAV-Yh-D4T">
+                                <rect key="frame" x="6" y="216" width="41" height="38"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xd9-01-Jz3">
+                                <rect key="frame" x="127" y="28" width="241" height="162"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Awards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOT-74-oPg">
+                                <rect key="frame" x="202" y="38" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="User_Award" translatesAutoresizingMaskIntoConstraints="NO" id="4av-Ga-fcz">
+                                <rect key="frame" x="183" y="67" width="130" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="IhX-dF-9W3"/>
-                                    <constraint firstAttribute="width" constant="130" id="k5L-nA-9He"/>
-                                    <constraint firstAttribute="width" secondItem="eIC-lu-aRx" secondAttribute="height" multiplier="65:64" id="lLT-ht-bk2"/>
+                                    <constraint firstAttribute="width" secondItem="4av-Ga-fcz" secondAttribute="height" multiplier="65:64" id="T98-S6-T8u"/>
+                                    <constraint firstAttribute="width" constant="130" id="XAy-wR-p5G"/>
+                                    <constraint firstAttribute="height" constant="128" id="jDX-Se-r4w"/>
                                 </constraints>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LDc-dE-yT9">
-                                <rect key="frame" x="6" y="192" width="594" height="359"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="x74-Tm-qlx">
-                                        <rect key="frame" x="0.0" y="28" width="594" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x74-Tm-qlx" id="SxQ-Jv-Ykk">
-                                            <rect key="frame" x="0.0" y="0.0" width="594" height="49.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="First_Award" translatesAutoresizingMaskIntoConstraints="NO" id="blg-WL-HrC">
-                                                    <rect key="frame" x="16" y="3" width="41" height="38"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First publication!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWK-lv-G91">
-                                                    <rect key="frame" x="67" y="0.0" width="460" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congratulations!! You have created your first publication." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El5-GZ-Q91">
-                                                    <rect key="frame" x="67" y="12" width="389" height="29"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="J1b-Ji-l4W">
-                                        <rect key="frame" x="0.0" y="78" width="594" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J1b-Ji-l4W" id="2Ja-xH-4MQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="594" height="49.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Five publication!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRA-ES-TBk">
-                                                    <rect key="frame" x="65" y="0.0" width="382" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Award_Star" translatesAutoresizingMaskIntoConstraints="NO" id="NVf-6B-e0w">
-                                                    <rect key="frame" x="13" y="0.0" width="44" height="41"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="44" id="1iA-52-3rA"/>
-                                                        <constraint firstAttribute="height" constant="41" id="5UZ-x6-Ump"/>
-                                                        <constraint firstAttribute="width" secondItem="NVf-6B-e0w" secondAttribute="height" multiplier="44:41" id="wi1-ro-abr"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congratulations! You have created five publications." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQW-9B-Kk5">
-                                                    <rect key="frame" x="65" y="20" width="382" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Five publication!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sk-Du-u2n">
+                                <rect key="frame" x="53" y="271" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Award_Star" translatesAutoresizingMaskIntoConstraints="NO" id="s1R-k6-aRj">
+                                <rect key="frame" x="7" y="279" width="44" height="41"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congratulations! " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0k-g0-zU8">
+                                <rect key="frame" x="53" y="289" width="126" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have created your first publication." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sI6-JY-Q9M">
+                                <rect key="frame" x="53" y="242" width="298" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have created five publications." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL6-Gg-u1w">
+                                <rect key="frame" x="53" y="309" width="241" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="________________________________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cif-g7-r1L">
+                                <rect key="frame" x="0.0" y="187" width="435" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="________________________________________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYZ-uJ-pQv">
+                                <rect key="frame" x="0.0" y="318" width="435" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eIC-lu-aRx" firstAttribute="centerX" secondItem="mdl-yb-oUy" secondAttribute="centerX" id="7QH-6g-cJz"/>
-                            <constraint firstItem="eIC-lu-aRx" firstAttribute="top" secondItem="vAc-pv-2ri" secondAttribute="bottom" constant="8" id="iJP-3B-HyF"/>
-                            <constraint firstItem="vAc-pv-2ri" firstAttribute="centerX" secondItem="mdl-yb-oUy" secondAttribute="centerX" id="j7v-aV-y6L"/>
-                            <constraint firstItem="vAc-pv-2ri" firstAttribute="top" secondItem="4xe-mJ-bN6" secondAttribute="bottom" constant="13" id="xdr-rQ-1Bl"/>
+                            <constraint firstItem="4av-Ga-fcz" firstAttribute="centerX" secondItem="mdl-yb-oUy" secondAttribute="centerX" id="JY5-qg-rOt"/>
+                            <constraint firstItem="4av-Ga-fcz" firstAttribute="top" secondItem="aOT-74-oPg" secondAttribute="bottom" constant="8" id="T1w-Gp-hWT"/>
+                            <constraint firstItem="aOT-74-oPg" firstAttribute="centerX" secondItem="mdl-yb-oUy" secondAttribute="centerX" id="eoZ-dC-V3d"/>
+                            <constraint firstItem="aOT-74-oPg" firstAttribute="top" secondItem="4xe-mJ-bN6" secondAttribute="bottom" constant="18" id="izC-a4-caB"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Awards" image="Award" id="EzH-dv-T1I"/>
