@@ -60,9 +60,10 @@ class PublicationTableViewController: UITableViewController {
     
     func createPostExample(){
         let post1 = Publication(title: "Taller de maestros", description: "Una descripcion breve descripcion breve descripcion breve descripcion breve descripcion breve descripcion breve", responsable: "Nicaela Onofre", date: "02-11-2016")!;
+        let post2 = Publication(title: "Reunión del ministerio jovenes", description: "Una reunion de emergencia descripcion breve descripcion breve descripcion breve descripcion breve descripcion breve descripcion breve", responsable: "Alain Quinones", date: "22-11-2016")!;
         
         publications += [post1]
-        publications += [post1]
+        publications += [post2]
     }
     
 
