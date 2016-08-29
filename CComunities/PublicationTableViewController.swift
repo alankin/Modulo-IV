@@ -85,7 +85,7 @@ class PublicationTableViewController: UITableViewController {
         
         let user_id = "user_id"
         
-        if preferences.objectForKey(user_id) != nil {
+        if preferences.integerForKey(user_id) != -1 {
             logged = true
         }
         
@@ -96,6 +96,29 @@ class PublicationTableViewController: UITableViewController {
         createPostExample();
     }
     
+    @IBAction func logout(sender: AnyObject) {
+        saveOnProperties(-1, property: "user_id")
+        			
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let loginViewController = storyBoard.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
+        self.presentViewController(loginViewController, animated:false, completion:nil)
+    }
+    
+    func saveOnProperties(id:Int, property:String){
+        let preferences = NSUserDefaults.standardUserDefaults()
+        
+        preferences.setInteger(id, forKey: property)
+        
+        //  Save to disk
+        let didSave = preferences.synchronize()
+        
+        if !didSave {
+            print("There was a problem saving the id");
+        }else{
+            print("Saved on properties! id: \(id)");
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.

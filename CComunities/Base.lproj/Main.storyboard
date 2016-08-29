@@ -76,6 +76,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="clV-TA-kjc">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="QE1-aP-zDw">
+                            <connections>
+                                <action selector="logout:" destination="9lF-en-X5D" id="KJO-Cf-E8k"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="uac-eP-uR1">
                             <connections>
                                 <segue destination="EoX-9L-Bly" kind="show" identifier="addItem" id="Q8c-li-xN6"/>
