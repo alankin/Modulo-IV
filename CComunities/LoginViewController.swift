@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadUsers()
 
         // Do any additional setup after loading the view.
     }
@@ -31,5 +37,25 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    @IBAction func login(sender: UIButton) {
+        let username = usernameTextField.text
+        let password = passwordTextField.text
+        print("\(username!) \(password!)")
+        // hacer la conexion con el servicio rest
+        // guardar en el property el id del usuario que se esta logueando
+    }
+    
+    func loadUsers(){
+            // populate using Rest
+            Alamofire.request(.GET, "https://ccomunities.herokuapp.com/users")
+                .responseJSON { response in
+                    if let JSON = response.result.value {
+                        print("JSON: \(JSON)")
+                    }
+            }
+            
+    }
 
 }

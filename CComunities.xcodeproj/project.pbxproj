@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14BB805C1D73B66200AF3323 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14BB805A1D73B66200AF3323 /* Alamofire.framework */; };
+		14BB805D1D73B66200AF3323 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14BB805B1D73B66200AF3323 /* SwiftyJSON.framework */; };
+		14BB805F1D73B68400AF3323 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14BB805A1D73B66200AF3323 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		14BB80601D73B68400AF3323 /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14BB805B1D73B66200AF3323 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		14C3338F1D68F04400BE9B38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C3338E1D68F04400BE9B38 /* AppDelegate.swift */; };
 		14C333911D68F04400BE9B38 /* PublicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C333901D68F04400BE9B38 /* PublicationViewController.swift */; };
 		14C333941D68F04400BE9B38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C333921D68F04400BE9B38 /* Main.storyboard */; };
@@ -38,7 +42,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		14BB805E1D73B67200AF3323 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				14BB805F1D73B68400AF3323 /* Alamofire.framework in CopyFiles */,
+				14BB80601D73B68400AF3323 /* SwiftyJSON.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		14BB805A1D73B66200AF3323 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		14BB805B1D73B66200AF3323 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		14C3338B1D68F04400BE9B38 /* CComunities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CComunities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C3338E1D68F04400BE9B38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14C333901D68F04400BE9B38 /* PublicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14BB805C1D73B66200AF3323 /* Alamofire.framework in Frameworks */,
+				14BB805D1D73B66200AF3323 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +109,8 @@
 		14C333821D68F04400BE9B38 = {
 			isa = PBXGroup;
 			children = (
+				14BB805A1D73B66200AF3323 /* Alamofire.framework */,
+				14BB805B1D73B66200AF3323 /* SwiftyJSON.framework */,
 				14C3338D1D68F04400BE9B38 /* CComunities */,
 				14C333A21D68F04400BE9B38 /* CComunitiesTests */,
 				14C333AD1D68F04400BE9B38 /* CComunitiesUITests */,
@@ -150,6 +174,7 @@
 				14C333871D68F04400BE9B38 /* Sources */,
 				14C333881D68F04400BE9B38 /* Frameworks */,
 				14C333891D68F04400BE9B38 /* Resources */,
+				14BB805E1D73B67200AF3323 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -421,6 +446,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CComunities/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = alashka.CComunities;
@@ -432,6 +461,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CComunities/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = alashka.CComunities;
