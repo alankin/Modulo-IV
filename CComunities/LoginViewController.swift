@@ -15,6 +15,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var users = [User]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadUsers()
@@ -51,8 +53,12 @@ class LoginViewController: UIViewController {
             // populate using Rest
             Alamofire.request(.GET, "https://ccomunities.herokuapp.com/users")
                 .responseJSON { response in
-                    if let JSON = response.result.value {
-                        print("JSON: \(JSON)")
+                    if let restUsers = response.result.value {
+                        //print("JSON: \(restUsers)")
+                        for user in restUsers as! [AnyObject] {
+                            let newUser = User(userId: user["id"]!!.integerValue, name: user["name"]!! as! String, lastName: user["name"]!! as! String, email: user["email"]!! as! String, photo:UIImage(named: "User")!)
+                            self.users.append(newUser!)
+                        }
                     }
             }
             
