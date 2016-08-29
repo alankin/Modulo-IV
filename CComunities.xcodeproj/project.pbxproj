@@ -14,6 +14,8 @@
 		14C333991D68F04400BE9B38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C333971D68F04400BE9B38 /* LaunchScreen.storyboard */; };
 		14C333A41D68F04400BE9B38 /* CComunitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C333A31D68F04400BE9B38 /* CComunitiesTests.swift */; };
 		14C333AF1D68F04400BE9B38 /* CComunitiesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C333AE1D68F04400BE9B38 /* CComunitiesUITests.swift */; };
+		521945B71D73B819007FF851 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521945B61D73B819007FF851 /* User.swift */; };
+		521945B91D73B998007FF851 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521945B81D73B998007FF851 /* Award.swift */; };
 		525C8E9D1D70E1FD007AAF67 /* AwardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C8E9C1D70E1FD007AAF67 /* AwardViewController.swift */; };
 		525C8E9F1D70E3D8007AAF67 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C8E9E1D70E3D8007AAF67 /* LoginViewController.swift */; };
 		526544451D7246150032A90B /* PublicationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526544441D7246150032A90B /* PublicationTableViewController.swift */; };
@@ -52,6 +54,8 @@
 		14C333AA1D68F04400BE9B38 /* CComunitiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CComunitiesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C333AE1D68F04400BE9B38 /* CComunitiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CComunitiesUITests.swift; sourceTree = "<group>"; };
 		14C333B01D68F04400BE9B38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		521945B61D73B819007FF851 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		521945B81D73B998007FF851 /* Award.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		525C8E9C1D70E1FD007AAF67 /* AwardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwardViewController.swift; sourceTree = "<group>"; };
 		525C8E9E1D70E3D8007AAF67 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		526544441D7246150032A90B /* PublicationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationTableViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				526544441D7246150032A90B /* PublicationTableViewController.swift */,
 				526544461D7246460032A90B /* Publication.swift */,
 				526544481D7250850032A90B /* PublicationTableViewCell.swift */,
+				521945B61D73B819007FF851 /* User.swift */,
+				521945B81D73B998007FF851 /* Award.swift */,
 			);
 			path = CComunities;
 			sourceTree = "<group>";
@@ -272,9 +278,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				526544491D7250850032A90B /* PublicationTableViewCell.swift in Sources */,
+				521945B91D73B998007FF851 /* Award.swift in Sources */,
 				526544471D7246460032A90B /* Publication.swift in Sources */,
 				525C8E9F1D70E3D8007AAF67 /* LoginViewController.swift in Sources */,
 				14C333911D68F04400BE9B38 /* PublicationViewController.swift in Sources */,
+				521945B71D73B819007FF851 /* User.swift in Sources */,
 				526544451D7246150032A90B /* PublicationTableViewController.swift in Sources */,
 				525C8E9D1D70E1FD007AAF67 /* AwardViewController.swift in Sources */,
 				14C3338F1D68F04400BE9B38 /* AppDelegate.swift in Sources */,
