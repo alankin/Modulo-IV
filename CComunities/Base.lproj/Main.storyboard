@@ -230,7 +230,7 @@
         <!--Login View Controller-->
         <scene sceneID="pbE-3z-Nfd">
             <objects>
-                <viewController id="lIi-yV-ra6" customClass="LoginViewController" customModule="CComunities" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="lIi-yV-ra6" customClass="LoginViewController" customModule="CComunities" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AwQ-Cj-cP9"/>
                         <viewControllerLayoutGuide type="bottom" id="oJe-R7-2uz"/>

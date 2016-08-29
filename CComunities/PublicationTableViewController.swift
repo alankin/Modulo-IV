@@ -15,7 +15,7 @@ class PublicationTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        createPostExample()
+        verifyLogin()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -64,6 +64,36 @@ class PublicationTableViewController: UITableViewController {
         
         publications += [post1]
         publications += [post2]
+    }
+    
+    func verifyLogin(){
+        if(!isLogged()){
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            
+            let loginViewController = storyBoard.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
+            self.presentViewController(loginViewController, animated:false, completion:nil)
+        }else{
+            loadPublications()
+        }
+    }
+    
+    func isLogged() -> Bool{
+        //TODO: Change this value to false when rest service is integrated
+        var logged = true
+        
+        let preferences = NSUserDefaults.standardUserDefaults()
+        
+        let user_id = "user_id"
+        
+        if preferences.objectForKey(user_id) != nil {
+            logged = true
+        }
+        
+        return logged;
+    }
+    
+    func loadPublications() {
+        createPostExample();
     }
     
 
