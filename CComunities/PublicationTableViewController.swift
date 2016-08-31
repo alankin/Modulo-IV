@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class PublicationTableViewController: UITableViewController {
     
     var publications = [Publication]()
+    var users = [User]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +41,7 @@ class PublicationTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        //print("Cantidad de publicaciones creadas: \(publications.count)")
         return publications.count
     }
 
@@ -67,6 +71,7 @@ class PublicationTableViewController: UITableViewController {
     }
     
     func verifyLogin(){
+        loadUsers()
         if(!isLogged()){
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             
@@ -93,7 +98,54 @@ class PublicationTableViewController: UITableViewController {
     }
     
     func loadPublications() {
-        createPostExample();
+        //createPostExample();
+        loadRestPublications();
+    }
+    
+    func loadUsers(){
+        Alamofire.request(.GET, "https://ccomunities.herokuapp.com/users")
+            .responseJSON {response in
+                //Parseo
+                let json = JSON(data: response.data!)
+                
+                for(key, subJson):(String, JSON) in json{
+                    //create Publication object
+                    let newUser = User(userId: subJson["id"].int!, username: subJson["username"].string!, name: subJson["name"].string!, lastName: subJson["last_name"].string!, email: subJson["email"].string!, photo: UIImage(named: "User")!)
+                    
+                    self.users.append(newUser!)
+                }
+        }
+    }
+    
+    func loadRestPublications() {
+        // populate using Rest
+        Alamofire.request(.GET, "https://ccomunities.herokuapp.com/publications")
+            .responseJSON {response in
+                //Parseo
+                let json = JSON(data: response.data!)
+                
+                for(key, subJson):(String, JSON) in json{
+                    //create Publication object
+                    let username = self.getUsername(subJson["responsible_id"].int!)
+                    let newPublication = Publication(title: subJson["title"].string!, description: subJson["description"].string!, responsable: username, date: subJson["date"].string!)
+                    
+                    self.publications.append(newPublication!)
+                    //reload table
+                    self.tableView.reloadData()
+                    
+                }
+        }
+    }
+    
+    func getUsername (userId:Int) -> String {
+        var res = ""
+        for user in users {
+            if user.userId == userId {
+                res = "\(user.name) \(user.lastName)"
+                break
+            }
+        }
+        return res
     }
     
     @IBAction func logout(sender: AnyObject) {
