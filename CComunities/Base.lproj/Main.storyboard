@@ -159,7 +159,7 @@
                                     <constraint firstAttribute="height" constant="177" id="E7k-1e-BWf"/>
                                     <constraint firstAttribute="width" constant="253" id="TCq-aj-phR"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -169,17 +169,40 @@
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12Q-yu-aSL">
+                                <rect key="frame" x="154" y="469" width="236" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="236" id="0gY-xU-2GF"/>
+                                    <constraint firstAttribute="height" constant="21" id="K2B-Cl-w02"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UWo-Lq-xjO">
+                                <rect key="frame" x="154" y="498" width="236" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="236" id="U28-YR-r1E"/>
+                                    <constraint firstAttribute="height" constant="30" id="arn-Fl-gej"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="12Q-yu-aSL" firstAttribute="top" secondItem="CDf-UR-jD2" secondAttribute="bottom" constant="8" id="0rT-mQ-ja4"/>
                             <constraint firstItem="d7j-XU-WOJ" firstAttribute="top" secondItem="GUC-Qk-Bzq" secondAttribute="bottom" constant="8" id="1vw-79-mOh"/>
                             <constraint firstItem="kx0-ZO-RXb" firstAttribute="centerX" secondItem="93N-hk-i91" secondAttribute="centerX" id="8vB-5s-xgj"/>
+                            <constraint firstItem="UWo-Lq-xjO" firstAttribute="top" secondItem="12Q-yu-aSL" secondAttribute="bottom" constant="8" id="9H5-iM-R7I"/>
                             <constraint firstItem="CDf-UR-jD2" firstAttribute="top" secondItem="VBY-3R-mte" secondAttribute="bottom" constant="8" id="9Vm-N4-Ngq"/>
                             <constraint firstItem="wCC-jc-rFS" firstAttribute="top" secondItem="6qc-Li-H56" secondAttribute="bottom" constant="13" id="BHY-Kc-tOf"/>
                             <constraint firstItem="CDf-UR-jD2" firstAttribute="centerX" secondItem="93N-hk-i91" secondAttribute="centerX" id="BvA-pw-iyc"/>
+                            <constraint firstItem="UWo-Lq-xjO" firstAttribute="centerX" secondItem="93N-hk-i91" secondAttribute="centerX" id="FEx-Wa-9SF"/>
                             <constraint firstItem="wCC-jc-rFS" firstAttribute="centerX" secondItem="93N-hk-i91" secondAttribute="centerX" id="S4G-GC-rqh"/>
                             <constraint firstItem="GUC-Qk-Bzq" firstAttribute="top" secondItem="nfv-sL-far" secondAttribute="bottom" constant="47" id="TOM-Gj-3JN"/>
                             <constraint firstItem="d7j-XU-WOJ" firstAttribute="centerX" secondItem="93N-hk-i91" secondAttribute="centerX" id="WAz-yB-tXG"/>
+                            <constraint firstItem="12Q-yu-aSL" firstAttribute="centerX" secondItem="93N-hk-i91" secondAttribute="centerX" id="cJt-nh-mlF"/>
                             <constraint firstItem="VBY-3R-mte" firstAttribute="centerX" secondItem="93N-hk-i91" secondAttribute="centerX" id="hI5-Cx-deE"/>
                             <constraint firstItem="6qc-Li-H56" firstAttribute="top" secondItem="d7j-XU-WOJ" secondAttribute="bottom" constant="13" id="ikd-cV-uvW"/>
                             <constraint firstItem="VBY-3R-mte" firstAttribute="top" secondItem="wCC-jc-rFS" secondAttribute="bottom" constant="8" id="kWQ-a6-u50"/>
@@ -193,10 +216,22 @@
                                 <action selector="cancel:" destination="XKP-2S-ebD" id="bf5-Bu-dGV"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="NhA-b4-qzR"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="NhA-b4-qzR">
+                            <connections>
+                                <segue destination="pbT-Vi-cdS" kind="unwind" unwindAction="unwindToPublicationsList:" id="Tx8-Vj-Fph"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dateTextField" destination="UWo-Lq-xjO" id="tfb-Tk-eo7"/>
+                        <outlet property="descriptionTextField" destination="CDf-UR-jD2" id="UfN-L6-FIk"/>
+                        <outlet property="responsableTextField" destination="d7j-XU-WOJ" id="8IY-fy-zlg"/>
+                        <outlet property="saveButton" destination="NhA-b4-qzR" id="bcG-wd-TAh"/>
+                        <outlet property="titleTextField" destination="wCC-jc-rFS" id="v5K-rO-2NP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zug-kc-w4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="pbT-Vi-cdS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3603" y="370"/>
         </scene>

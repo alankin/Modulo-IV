@@ -119,6 +119,18 @@ class PublicationTableViewController: UITableViewController {
             print("Saved on properties! id: \(id)");
         }
     }
+    
+    @IBAction func unwindToPublicationsList(sender: UIStoryboardSegue) {
+        // if let sourceViewController = sender.sourceViewController as? MealViewController, meal = sourceViewController.meal {
+        // Add a new meal.
+       if let sourceViewController = sender.sourceViewController as?
+        ViewController, publication = sourceViewController.publication {
+        
+            let newIndexPath = NSIndexPath(forRow: publications.count, inSection: 0)
+            publications.append(publication)
+            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
