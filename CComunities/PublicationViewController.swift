@@ -128,7 +128,20 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
             
             // Set the meal to be passed to MealListTableViewController after the unwind segue.
             publication = Publication(title: title, description: description, responsable: responsable, date: date)
+            
+            savePublicationRest(publication!)
         }
+    }
+    
+    func savePublicationRest(publication: Publication){
+        let parameters = [
+            "responsible_id": getUserLoggedId(),
+            "title": publication.title,
+            "description": publication.description,
+            "date": publication.date
+        ]
+
+        Alamofire.request(.POST, "https://ccomunities.herokuapp.com/publications", parameters: (parameters as! [String : AnyObject]), encoding: .JSON)
     }
 
 }
