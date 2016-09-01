@@ -18,6 +18,7 @@ class PublicationTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadUsers()
         verifyLogin()
 
         // Uncomment the following line to preserve selection between presentations
@@ -71,7 +72,6 @@ class PublicationTableViewController: UITableViewController {
     }
     
     func verifyLogin(){
-        loadUsers()
         if(!isLogged()){
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             

@@ -39,6 +39,30 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    
+    @IBAction func dateTextField(sender: UITextField) {
+        let datePickerView:UIDatePicker = UIDatePicker()
+        
+        datePickerView.datePickerMode = UIDatePickerMode.Date
+        
+        sender.inputView = datePickerView
+        
+        datePickerView.addTarget(self, action: #selector(ViewController.datePickerValueChanged), forControlEvents: UIControlEvents.ValueChanged)
+        
+    }
+    
+    func datePickerValueChanged(sender:UIDatePicker) {
+    
+        let dateFormatter = NSDateFormatter()
+        
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+    
+        dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
+    
+        dateTextField.text = dateFormatter.stringFromDate(sender.date)
+    
+    }
+    
 
     // MARK: UITextFieldDelegate
     
