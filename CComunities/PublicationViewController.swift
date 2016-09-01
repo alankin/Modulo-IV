@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -19,9 +21,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     var publication: Publication?
+    var users = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadUsers()
         // Do any additional setup after loading the view, typically from a nib.
         responsableTextField.delegate = self
         titleTextField.delegate = self
@@ -33,6 +37,31 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func getUserLoggedId() -> Int{
+        let preferences = NSUserDefaults.standardUserDefaults()
+        return preferences.integerForKey("user_id");
+    }
+    
+    func loadUsers(){
+        let userId = getUserLoggedId()
+        
+        Alamofire.request(.GET, "https://ccomunities.herokuapp.com/users")
+            .responseJSON {response in
+                //Parseo
+                let json = JSON(data: response.data!)
+                
+                for(key, subJson):(String, JSON) in json{
+                    //create Publication object
+                    let newUser = User(userId: subJson["id"].int!, username: subJson["username"].string!, name: subJson["name"].string!, lastName: subJson["last_name"].string!, email: subJson["email"].string!, photo: UIImage(named: "User")!)
+                    
+                    self.users.append(newUser!)
+                    if userId == newUser!.userId {
+                        self.responsableTextField.text = "\(newUser!.name) \(newUser!.lastName)"
+                    }
+                }
+        }
     }
 
     @IBAction func cancel(sender: UIBarButtonItem) {
