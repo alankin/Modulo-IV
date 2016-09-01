@@ -25,6 +25,7 @@
 		526544451D7246150032A90B /* PublicationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526544441D7246150032A90B /* PublicationTableViewController.swift */; };
 		526544471D7246460032A90B /* Publication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526544461D7246460032A90B /* Publication.swift */; };
 		526544491D7250850032A90B /* PublicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526544481D7250850032A90B /* PublicationTableViewCell.swift */; };
+		526F62D11D77C1D000EFD5D0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526F62D01D77C1D000EFD5D0 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		526544441D7246150032A90B /* PublicationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationTableViewController.swift; sourceTree = "<group>"; };
 		526544461D7246460032A90B /* Publication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Publication.swift; sourceTree = "<group>"; };
 		526544481D7250850032A90B /* PublicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicationTableViewCell.swift; sourceTree = "<group>"; };
+		526F62D01D77C1D000EFD5D0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				526F62D11D77C1D000EFD5D0 /* MapKit.framework in Frameworks */,
 				14BB805C1D73B66200AF3323 /* Alamofire.framework in Frameworks */,
 				14BB805D1D73B66200AF3323 /* SwiftyJSON.framework in Frameworks */,
 			);
@@ -113,6 +116,7 @@
 		14C333821D68F04400BE9B38 = {
 			isa = PBXGroup;
 			children = (
+				526F62D01D77C1D000EFD5D0 /* MapKit.framework */,
 				14BB805A1D73B66200AF3323 /* Alamofire.framework */,
 				14BB805B1D73B66200AF3323 /* SwiftyJSON.framework */,
 				14C3338D1D68F04400BE9B38 /* CComunities */,
