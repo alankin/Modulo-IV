@@ -23,6 +23,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     @IBOutlet weak var mapView: MKMapView!
     
+    var latitud = -17.3911683193295;
+    var longitud = -66.23914868977704;
+    
     var publication: Publication?
     var users = [User]()
     
@@ -35,6 +38,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         //descriptionTextField.delegate = self
         
         checkValidPublication()
+        initMapView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -145,6 +149,30 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         ]
 
         Alamofire.request(.POST, "https://ccomunities.herokuapp.com/publications", parameters: (parameters as! [String : AnyObject]), encoding: .JSON)
+    }
+    
+    func initMapView(){
+        let zoom:MKCoordinateSpan = MKCoordinateSpanMake(0.01 , 0.01)
+        
+        print("\(latitud) | \(longitud)")
+        
+        let location:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitud, longitude: longitud)
+        
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(location, zoom)
+        
+        mapView.setRegion(region, animated: true)
+
+        addPin(titleTextField.text!, description: "New event", region: region, location: location);
+    }
+    
+    func addPin(title:String, description:String, region:MKCoordinateRegion, location:CLLocationCoordinate2D){
+        let anotation = MKPointAnnotation()
+        anotation.coordinate = location
+        
+        anotation.title = title
+        anotation.subtitle = description
+        
+        mapView.addAnnotation(anotation)
     }
 
 }
